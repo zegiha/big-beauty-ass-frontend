@@ -1,6 +1,6 @@
 'use client'
 
-import { getGithubOAuthUrl } from '@/api/getClientId'
+import { getGithubOAuthUrl } from '@/shared/apis/getClientId'
 
 export default function Home() {
   const handleClick = async () => {
