@@ -1,0 +1,26 @@
+.input {
+  color: var(--on-generic);
+  font-family: 'Wanted Sans Variable';
+  font-size: 14px;
+  font-weight: 400;
+
+  width: 100%;
+  padding: 12px;
+
+  outline: none;
+  border: 1px solid var(--outline-default);
+  border-radius: 6px;
+  background-color: var(--container-normal);
+
+  transition: all 0.2s ease-in-out;
+
+}
+.input:focus {
+  border: 1px solid var(--outline-active);
+}
+.input::placeholder {
+  color: var(--on-generic-dim);
+  font-family: 'Wanted Sans Variable';
+  font-size: 14px;
+  font-weight: 400;
+}

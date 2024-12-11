@@ -1,0 +1,8 @@
+:root {
+  /* Font Size */
+  --font-size-caption: 12px;   /* caption */
+  --font-size-contents: 14px;  /* contents */
+  --font-size-body: 16px;      /* body */
+  --font-size-subtitle: 20px;  /* subTitle */
+  --font-size-title: 24px;     /* title */
+} 

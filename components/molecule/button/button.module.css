@@ -1,0 +1,42 @@
+.button {
+  font-family: 'Wanted Sans Variable';
+  padding: 6px 16px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background-color: #00f7ff;
+}
+
+.primary_button {
+  background-color: var(--primary-normal);
+  color: var(--on-primary);
+}
+.primary_button:hover {
+  background-color: var(--primary-high);
+}
+
+.gray_button {
+  background-color: var(--container-normal);
+  color: var(--on-generic);
+}
+.gray_button:hover {
+  background-color: var(--container-high);
+}
+
+.green_button {
+  background-color: var(--green-500);
+  color: var(--on-primary);
+}
+.green_button:hover {
+  background-color: var(--green-600);
+}
+
+.red_button {
+  background-color: var(--red-500);
+  color: var(--on-primary);
+}
+.red_button:hover {
+  background-color: var(--red-600);
+}
+

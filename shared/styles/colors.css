@@ -1,0 +1,101 @@
+/* Basic Colors */
+/* Gray */
+:root {
+  --gray-010: #0D0E0F;
+  --gray-100: #1B1A1C;
+  --gray-200: #1E2124;
+  --gray-300: #25282B;
+  --gray-400: #2C2F33;
+  --gray-500: #707985;
+  --gray-600: #A7ACB3;
+  --gray-700: #D2D5DA;
+  --gray-800: #FFFFFF;
+
+  /* Gray Fixed */
+  --gray-fixed-010: #FFFFFF;
+  --gray-fixed-100: #F2F4F5;
+  --gray-fixed-200: #E6EAED;
+  --gray-fixed-300: #D7DCE0;
+  --gray-fixed-400: #91999E;
+  --gray-fixed-500: #7C848A;
+  --gray-fixed-600: #474E52;
+  --gray-fixed-700: #2C3236;
+  --gray-fixed-800: #141414;
+
+  /* Red */
+  --red-100: #321312;
+  --red-200: #4C1614;
+  --red-300: #7A1B17;
+  --red-400: #951F19;
+  --red-500: #BA231C;
+  --red-600: #F02A20;
+  --red-700: #F45D55;
+  --red-800: #F78882;
+
+  /* Orange */
+  --orange-500: #BD6022;
+  --orange-600: #F57A28;
+
+  /* Yellow */
+  --yellow-100: #312911;
+  --yellow-200: #4B3C12;
+  --yellow-300: #795E14;
+  --yellow-400: #947315;
+  --yellow-500: #B88D17;
+  --yellow-600: #EEB519;
+  --yellow-700: #F2C750;
+  --yellow-800: #F5D67E;
+
+  /* Green */
+  --green-500: #259A43;
+  --green-600: #2DC753;
+
+  /* Indigo */
+  --indigo-100: #1B1B36;
+  --indigo-200: #252551;
+  --indigo-300: #363581;
+  --indigo-400: #40409D;
+  --indigo-500: #4E4CC4;
+  --indigo-600: #6360FC;
+  --indigo-700: #8886FD;
+  --indigo-800: #A8A6FD;
+
+  /* Blue */
+  --blue-100: #122134;
+  --blue-200: #162E4E;
+  --blue-300: #1D467B;
+  --blue-400: #205596;
+  --blue-500: #2567BB;
+  --blue-600: #2D83F0;
+  --blue-700: #5FA1F4;
+  --blue-800: #89B9F7;
+
+  /* Semantic Colors */
+  /* Surface */
+  --surface: var(--gray-010);
+  --surface-dim: var(--gray-100);
+
+  /* Generic */
+  --on-generic-dim: var(--gray-500);
+  --on-generic: var(--gray-700);
+  --on-generic-variable: var(--gray-800);
+
+  /* Container */
+  --container-lower: var(--gray-010);
+  --container-normal: var(--gray-100);
+  --container-high: var(--gray-200);
+  --container-highest: var(--gray-300);
+
+  /* Primary */
+  --primary-highest: var(--indigo-400);
+  --primary-high: var(--indigo-500);
+  --primary-normal: var(--indigo-600);
+  --primary-low: var(--indigo-300);
+  --on-primary: var(--gray-fixed-010);
+  --on-primary-dim: var(--gray-500);
+
+  /* Outline */
+  --outline-default: var(--gray-300);
+  --outline-active: var(--blue-500);
+  --outline-error: var(--red-500);
+} 
