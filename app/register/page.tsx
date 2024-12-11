@@ -2,15 +2,32 @@
 
 import { Row, Col, Typo } from '@/components/atom';
 import styles from './register.module.css';
-import { useState } from 'react';
+import {useEffect, useState} from 'react';
 import { Input, Button } from '@/components/molecule';
 import Form from 'next/form';
 import Link from 'next/link';
+import {useSearchParams} from "next/navigation";
+import {getGithubOAuthUrl} from "@/shared/apis/getClientId";
 
 export default function Register() {
+  const searchParams = useSearchParams()
+  const [status, setStatus] = useState<'success' | 'load' | 'error' | null>(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [nickname, setNickname] = useState('');
+  useEffect(() => {
+    const code = searchParams.get('code');
+    if(!code) {
+      const goToGitOAuth = async () => {
+        setStatus('load')
+        window.location.href = await getGithubOAuthUrl();
+        setStatus(null)
+      };
+      goToGitOAuth()
+
+    }
+  }, []);
+
   return (
     <Col
       justifyContent='center'
@@ -23,7 +40,7 @@ export default function Register() {
           <Typo.Title weight='semiBold' color='onGenericVariable'>환영해요!</Typo.Title>
           <Typo.Contents color='onGenericDim'>회원가입을 진행해주세요.</Typo.Contents>
         </Col>
-        <Form action=''>
+        <Form action={''}>
           <Col width={340} gap={20}>
             <Col gap={8}>
               <label htmlFor='user_email'><Typo.Contents>이메일</Typo.Contents></label>
@@ -44,7 +61,7 @@ export default function Register() {
               padding={12}
               onClick={() => {}}
             >
-              <Typo.Body weight='semiBold' color='onPrimary'>회원가입</Typo.Body>
+              <Typo.Body weight='semiBold' color='onPrimary'>{status === null ? '회원가입' : '처리중'}</Typo.Body>
             </Button>
           </Col>
         </Form>
@@ -70,34 +87,6 @@ export default function Register() {
 //   const [status, setStatus ] = useState<'success' | 'load' | 'error' | null>(null);
 //   const searchParams = useSearchParams();
 //   const router = useRouter();
-//   const onSubmit = async (formData: FormData): Promise<void> => {
-//     setStatus("load");
-//     const userName = formData.get('user_name');
-//     const userEmail = formData.get('user_email');
-//     const userPassword = formData.get('user_password');
-//     const code = searchParams.get('code');
-//     console.log(userName, userEmail, userPassword, code);
-//     if(userName && userEmail && userPassword && code) {
-//       try {
-//         await fetch(`http://localhost:8080/auth/register?code=${code}`, {
-//           method: 'POST',
-//           headers: {
-//             'Content-Type': 'application/json',
-//           },
-//           body: JSON.stringify({
-//             user_name: userName,
-//             user_email: userEmail,
-//             user_password: userPassword,
-//           }),
-//         })
-//         router.push('/success')
-//       } catch (e) {
-//         console.error(e);
-//         setStatus("error");
-//       }
-//     } else {
-//     }
-//   }
 //   return (
 //     <div>
 //       <Form action={onSubmit}>
